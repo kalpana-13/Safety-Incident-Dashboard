@@ -6,7 +6,7 @@ interface Incident {
     reported_at: string;
   }
   
-  // Initial Mock Data
+
   let incidents: Incident[] = [
     {
       id: 1,
@@ -31,7 +31,7 @@ interface Incident {
     },
   ];
   
-  // Selecting Elements
+
   const incidentList = document.querySelector('.incident-list') as HTMLDivElement;
   const filterSelect = document.getElementById('filter') as HTMLSelectElement;
   const sortSelect = document.getElementById('sort') as HTMLSelectElement;

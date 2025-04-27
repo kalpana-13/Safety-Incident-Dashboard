@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AI Safety Incident Dashboard</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <div class="dashboard">
+      <h1>AI Safety Incident Dashboard</h1>
+
+      <div class="controls">
+        <div>
+          <label for="filter">Filter by Severity:</label>
+          <select id="filter">
+            <option value="All">All</option>
+            <option value="Low">Low</option>
+            <option value="Medium">Medium</option>
+            <option value="High">High</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="sort">Sort by Date:</label>
+          <select id="sort">
+            <option value="newest">Newest First</option>
+            <option value="oldest">Oldest First</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="incident-list">
+        <!-- Incidents will be injected here -->
+      </div>
+
+      <div class="report-form">
+        <h2>Report New Incident</h2>
+        <form id="reportForm">
+          <input type="text" id="title" placeholder="Title" required />
+          <textarea
+            id="description"
+            placeholder="Description"
+            required
+          ></textarea>
+          <select id="severity" required>
+            <option value="">Select Severity</option>
+            <option value="Low">Low</option>
+            <option value="Medium">Medium</option>
+            <option value="High">High</option>
+          </select>
+          <button type="submit">Submit Incident</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="app.js" defer></script>
+  </body>
+</html>
